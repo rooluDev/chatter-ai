@@ -1,0 +1,22 @@
+# 민감 정보 설정 파일
+**/application-local.yml
+**/application-*.yml
+!**/application.yml
+
+# 업로드 파일
+uploads/
+
+# 빌드 산출물
+build/
+.gradle/
+*.jar
+*.war
+out/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store

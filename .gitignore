@@ -1,0 +1,24 @@
+# 백엔드 민감 정보
+backend/**/application-local.yml
+backend/**/application-*.yml
+!backend/**/application.yml
+
+# 업로드 파일
+uploads/
+
+# 빌드 산출물
+backend/build/
+backend/.gradle/
+backend/*.jar
+frontend/dist/
+frontend/node_modules/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+
+./docs/env-spec.md

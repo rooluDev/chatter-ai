@@ -1,0 +1,161 @@
+/* =========================================================
+   ChatterAI — Global Styles
+   ========================================================= */
+
+/* CSS 변수 */
+:root {
+  /* 브랜드 컬러 */
+  --color-primary: #5865f2;
+  --color-primary-hover: #4752c4;
+  --color-primary-light: rgba(88, 101, 242, 0.12);
+
+  /* 배경 */
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f3f4f6;
+  --color-bg-tertiary: #e9eaf0;
+  --color-sidebar: #1e1f2e;
+  --color-sidebar-hover: rgba(255, 255, 255, 0.07);
+  --color-sidebar-active: rgba(88, 101, 242, 0.35);
+
+  /* 텍스트 */
+  --color-text: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-text-muted: #9ca3af;
+  --color-text-on-sidebar: #c8cad8;
+  --color-text-on-sidebar-active: #ffffff;
+
+  /* 보더 */
+  --color-border: #e5e7eb;
+
+  /* 상태 */
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+  --color-online: #22c55e;
+  --color-away: #f59e0b;
+  --color-offline: #6b7280;
+
+  /* AI 메시지 */
+  --color-ai-bg: #eff6ff;
+  --color-ai-border: #bfdbfe;
+
+  /* 서피스 */
+  --color-surface: #f9fafb;
+  --color-hover: rgba(0, 0, 0, 0.05);
+
+  /* 크기 */
+  --sidebar-width: 240px;
+  --header-height: 64px;
+
+  /* 폰트 */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 리셋 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+/* 버튼 기본 */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* 프라이머리 버튼 */
+.btn-primary {
+  padding: 0.625rem 1.25rem;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: background 0.15s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 입력 기본 */
+input, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* 스크롤바 (WebKit) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* 유틸리티 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* 트랜지션 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.25s ease;
+}
+.slide-up-enter-from,
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translateY(8px);
+}
